@@ -2,10 +2,11 @@ package com.faisal.sfgpetclinic.services.map;
 
 import com.faisal.sfgpetclinic.models.Vet;
 import com.faisal.sfgpetclinic.services.CrudService;
+import com.faisal.sfgpetclinic.services.VetService;
 
 import java.util.Set;
 
-public class VetServiceMap extends AbstractMapService<Vet, Long> implements CrudService<Vet , Long> {
+public class VetServiceMap extends AbstractMapService<Vet, Long> implements VetService {
 
 
     @Override
@@ -31,5 +32,10 @@ public class VetServiceMap extends AbstractMapService<Vet, Long> implements Crud
     @Override
     public Vet findById(Long id) {
         return super.findById(id);
+    }
+
+    @Override
+    public Vet findByLastName(String lastName) {
+        return null;
     }
 }
