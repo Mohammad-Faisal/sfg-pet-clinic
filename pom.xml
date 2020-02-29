@@ -51,12 +51,13 @@
                 </configuration>
             </plugin>
 
+
         </plugins>
     </build>
 
     <scm>
-        <developerConnection>scm:git:https://github.com/Mohammad-Faisal/sfg-pet-clinic.git</developerConnection>
-      <tag>HEAD</tag>
+        <developerConnection>scm:git:git@github.com:Mohammad-Faisal/sfg-pet-clinic.git</developerConnection>
+        <tag>HEAD</tag>
   </scm>
 
 </project>
