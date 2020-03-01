@@ -6,21 +6,21 @@ import com.faisal.sfgpetclinic.services.OwnerService;
 import com.faisal.sfgpetclinic.services.VetService;
 import com.faisal.sfgpetclinic.services.map.OwnerServiceMap;
 import com.faisal.sfgpetclinic.services.map.VetServiceMap;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
 @Component
 public class DataLoader implements CommandLineRunner {
 
-    private static OwnerService ownerService;
-    private static VetService vetService;
+    private final OwnerService ownerService;
+    private final VetService vetService;
 
-
-
-    public DataLoader() {
-        ownerService = new OwnerServiceMap();
-        vetService = new VetServiceMap();
+    public DataLoader(OwnerService ownerService , VetService vetService) {
+        this.ownerService = ownerService;
+        this.vetService = vetService;
     }
+
 
     @Override
     public void run(String... args) throws Exception {
@@ -31,13 +31,13 @@ public class DataLoader implements CommandLineRunner {
 
         ownerService.save(owner1);
 
-
         Vet vet1 = new Vet();
 
         vet1.setId(1L);
         vet1.setFirstName("mohammad");
         vet1.setLastName("Faisal");
 
+        System.out.println("loaded.........");
         vetService.save(vet1);
 
     }

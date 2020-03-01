@@ -3,9 +3,12 @@ package com.faisal.sfgpetclinic.services.map;
 import com.faisal.sfgpetclinic.models.Owner;
 import com.faisal.sfgpetclinic.services.CrudService;
 import com.faisal.sfgpetclinic.services.OwnerService;
+import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
+
+@Service
 public class OwnerServiceMap extends AbstractMapService<Owner, Long> implements OwnerService {
 
 

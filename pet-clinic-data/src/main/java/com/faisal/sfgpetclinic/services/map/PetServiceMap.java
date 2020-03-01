@@ -2,8 +2,11 @@ package com.faisal.sfgpetclinic.services.map;
 
 import com.faisal.sfgpetclinic.models.Pet;
 import com.faisal.sfgpetclinic.services.CrudService;
+import org.springframework.stereotype.Service;
 
 import java.util.Set;
+
+@Service
 
 public class PetServiceMap extends AbstractMapService<Pet, Long> implements CrudService<Pet , Long> {
     
